@@ -17,9 +17,9 @@ transicoes = {
 estado_inicial = 'q00'
 estados_finais = {'q10'}
 
-def afd(cadeia):
+def afd(palavra):
     estado_atual = estado_inicial
-    for simbolo in cadeia:
+    for simbolo in palavra:
         estado_atual = transicoes[(estado_atual, simbolo)]
     return estado_atual in estados_finais
 
