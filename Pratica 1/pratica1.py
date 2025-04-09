@@ -14,14 +14,14 @@ transicoes = {
     ('q12', 'b'): 'q10'
 }
 
-estado_inicial = 'q00'
-estados_finais = {'q10'}
+q0 = 'q00'
+F = {'q10'}
 
 def afd(palavra):
-    estado_atual = estado_inicial
+    estado_atual = q0
     for simbolo in palavra:
         estado_atual = transicoes[(estado_atual, simbolo)]
-    return estado_atual in estados_finais
+    return estado_atual in F
 
 # Testes
 print (afd('abbb'))  # True
